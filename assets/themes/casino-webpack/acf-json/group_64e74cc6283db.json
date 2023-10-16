@@ -1,0 +1,272 @@
+{
+    "key": "group_64e74cc6283db",
+    "title": "Diagrams block Options",
+    "fields": [
+        {
+            "key": "field_64e7553c2be41",
+            "label": "Use Horizontal or Vertical Diagrams",
+            "name": "use_horizontal_or_vertical_diagrams",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Vertical",
+            "ui_off_text": "Horizontal"
+        },
+        {
+            "key": "field_64e74cd507998",
+            "label": "Diagrams Horizontal",
+            "name": "diagrams_horizontal",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64e7553c2be41",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_64e74d0107999",
+                    "label": "Min Value",
+                    "name": "min_value",
+                    "type": "number",
+                    "instructions": "min - 80 \r\nmax - 100",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 80,
+                    "max": 100,
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_64e74d350799b",
+                    "label": "Max Value",
+                    "name": "max_value",
+                    "type": "number",
+                    "instructions": "min - 80 \r\nmax - 100",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 80,
+                    "max": 100,
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_64e754c62be3f",
+                    "label": "Icon Diagram Elem",
+                    "name": "icon_diagram_elem",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "",
+                    "preview_size": "thumbnail",
+                    "library": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_64e754f42be40",
+                    "label": "Name Diagram Elem",
+                    "name": "name_diagram_elem",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_64e7556c2be42",
+            "label": "Diagrams Vertical",
+            "name": "diagrams_vertical",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_64e7553c2be41",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 8,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_64e7556c2be43",
+                    "label": "Min Value",
+                    "name": "min_value",
+                    "type": "number",
+                    "instructions": "min - 80 \r\nmax - 100",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 80,
+                    "max": 100,
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_64e7556c2be44",
+                    "label": "Max Value",
+                    "name": "max_value",
+                    "type": "number",
+                    "instructions": "min - 80 \r\nmax - 100",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 80,
+                    "max": 100,
+                    "step": "0.1"
+                },
+                {
+                    "key": "field_64e7556c2be45",
+                    "label": "Icon Diagram Elem",
+                    "name": "icon_diagram_elem",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_64e7556c2be46",
+                    "label": "Name Diagram Elem",
+                    "name": "name_diagram_elem",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/diagrams"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1692887538
+}

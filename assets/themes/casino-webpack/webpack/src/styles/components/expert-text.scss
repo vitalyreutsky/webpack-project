@@ -1,0 +1,42 @@
+.expert-text {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__text {
+    margin-right: 112px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+  &__title {
+    color: $text_black;
+    font-family: $font-black;
+    font-size: 28px;
+    line-height: 120%;
+
+    margin-bottom: 30px;
+    max-width: 497px;
+
+    @media (max-width: 768px) {
+      max-width: none;
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+  &__desc {
+    color: $text_black;
+    font-size: 15px;
+    line-height: 150%;
+    max-width: 590px;
+  }
+  &__card {
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+  }
+}

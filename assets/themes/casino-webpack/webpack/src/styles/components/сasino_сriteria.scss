@@ -1,0 +1,78 @@
+.criteria {
+  .position-right {}
+  .position-left {}
+  .wrapper {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    padding: 30px;
+    @media (max-width: 768px) {
+      padding: 20px 16px;
+      position: relative;
+    }
+  }
+  &__icon {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    margin-right: 76px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 20px;
+      left: 16px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    flex: 1 1 0;
+  }
+  &__title {
+    font-family: $font-bold;
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+      margin: 6px 0 6px 60px;
+      font-size: 16px;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 768px) {
+      margin-top: 21px;
+    }
+  }
+  &__card {
+    width: 220px;
+    max-width: 220px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(3), &:nth-last-child(2), &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-bottom: 15px;
+      &:nth-last-child(3), &:nth-last-child(2) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__name {}
+}

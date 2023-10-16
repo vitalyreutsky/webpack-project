@@ -1,0 +1,122 @@
+.modal-registr {
+  display: none;
+  position: fixed;
+  z-index: 299;
+  bottom: 20px;
+  right: 20px;
+  width: 240px;
+  border-radius: 12px;
+  border: 1px solid $border_gray;
+  background: $white;
+  padding: 52px 12px 24px;
+  &.show {
+    display: block;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__close {
+    width: 24px;
+    height: 24px;
+
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+
+    cursor: pointer;
+    rect {
+      transition: .3s;
+    }
+    &:hover {
+      rect.hover {
+        fill: #117C56;
+      }
+      rect.hover-light {
+        stroke: #47B68E;
+      }
+    }
+  }
+  &__wrapper, &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &.success {
+    .modal-registr__form {
+      display: none;
+    }
+    .modal-registr__success {
+      display: flex;
+    }
+  }
+  &__success {
+    display: none;
+    flex-direction: column;
+    p {
+      text-align: center;
+    }
+  }
+  &__image {
+    width: 90px;
+    height: 90px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    top: -45px;
+    transform: translateX(-50%);
+  }
+  &__title {
+    font-family: $font-bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+    span {
+      color: $background_light_green;
+    }
+  }
+  &__desc {
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+  &__email {
+    border-radius: 8px;
+    border: 1px solid var(--gray-4-line, #E6EAEE);
+    background: $white;
+    padding: 10px 12px;
+
+    width: 100%;
+    transition: .3s;
+
+    color: #5F6874;
+    font-size: 14px;
+    line-height: normal;
+
+    &.error {
+      border-color: $border_red;
+    }
+    &_wrapper {
+      width: 100%;
+      position: relative;
+      margin-bottom: 16px;
+      .invalid-text {
+        color: $border_red;
+        font-size: 12px;
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  &__checkbox {
+
+  }
+  &__btn {
+    margin-top: 16px;
+    background: $background_light_green;
+  }
+}

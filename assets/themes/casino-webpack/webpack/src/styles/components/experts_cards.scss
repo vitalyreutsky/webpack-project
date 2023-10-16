@@ -1,0 +1,31 @@
+.experts-cards {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
+    .expert-card {
+      width: calc(50% - 10px);
+      max-width: calc(50% - 10px);
+      @media (max-width: 768px) {
+        width: 100%;
+        max-width: none;
+      }
+      h1, h2, h3, h4, h5, p {
+        margin-bottom: 0;
+      }
+    }
+    &.triply {
+      .expert-card {
+        width: calc(33% - 12px);
+        max-width: calc(33% - 12px);
+        .expert-card__autograph {
+          display: none;
+        }
+      }
+    }
+  }
+}

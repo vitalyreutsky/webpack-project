@@ -1,0 +1,52 @@
+.tooltip-wrapper {
+  position: relative;
+  &.active {
+    .tooltip-text {
+      bottom: -7.5px;
+      left: 21px;
+      @media (max-width: 768px) {
+        left: -10px;
+      }
+    }
+    .tooltip-icon {
+      svg path {
+        stroke: #117C56;
+      }
+    }
+  }
+}
+
+.tooltip-icon {
+  display: flex;
+  cursor: pointer;
+  svg {
+    path {
+      transition: .3s;
+    }
+  }
+  &:hover {
+    svg path {
+      stroke: #117C56;
+    }
+  }
+}
+
+.tooltip-text {
+  position: absolute;
+  transition: .3s;
+  bottom: 300px;
+  left: 21px;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  border: 1px solid $background_light_green;
+  background: $white;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  @media (max-width: 768px) {
+    left: -10px;
+  }
+  span {
+    font-size: 15px;
+    line-height: 120%;
+  }
+}

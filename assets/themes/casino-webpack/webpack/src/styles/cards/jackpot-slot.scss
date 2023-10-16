@@ -1,0 +1,305 @@
+.jackpot-slot {
+  display: flex;
+  flex-direction: column;
+  width: calc(33% - 14px);
+  margin-right: 20px;
+  border-radius: 13px;
+  border: 1px solid $border_gray;
+  background: $white;
+  overflow: hidden;
+  transition: .3s;
+  position: relative;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  &:hover {
+    border-color: $background_dark_green;
+    .jackpot-slot__img img {
+      transform: scale(1.1);
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &.main {
+    margin-top: 0;
+    .jackpot-slot__value {
+      background: $background_light_green;
+      color: $white;
+      border-color: $background_light_green;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        transform: translateX(100%);
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 99%, rgba(255, 255, 255, 0) 100%);
+        transition: opacity .2s;
+        opacity: 1;
+        animation: logo-shine 2s .25s infinite;
+      }
+
+      @media (max-width: 768px) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border: none;
+        width: 135px;
+        border-radius: 0;
+        background: #47B68E;
+        margin-bottom: 0;
+        span {
+          color: #fff;
+          font-family: $font-bold;
+          font-size: 16px;
+          line-height: 150%;
+        }
+        &:before {
+          content: none;
+        }
+      }
+    }
+    .jackpot-slot__btn {
+      background: $background_light_green;
+      color: $white;
+      &:hover {
+        background: $background_dark_green;
+        border-color: $background_dark_green;
+      }
+    }
+  }
+  &__link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+  &__wrapper {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+  }
+  &__img {
+    height: 220px;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      min-width: 135px;
+      width: 135px;
+      height: 153px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: .3s;
+    }
+  }
+  &__body {
+    padding: 0 34px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @media (max-width: 768px) {
+      flex: 1 1 0;
+      padding: 10px 10px 10px 12px;
+    }
+  }
+  &__value {
+    margin-top: -34px;
+
+    border-radius: 13px;
+    border: 1px solid $border_gray;
+    background: $white;
+    padding: 10px;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+
+    span {
+      font-family: $font-black;
+      font-size: 32px;
+      text-align: center;
+      line-height: 48px;
+    }
+    @media (max-width: 768px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border: none;
+      width: 135px;
+      border-radius: 0;
+      background: #F4F5F3;
+      margin-bottom: 0;
+      span {
+        color: #117C56;
+        font-family: $font-bold;
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+  }
+  &__title {
+    font-family: $font-bold;
+    margin-bottom: 12px;
+    text-align: center;
+    text-transform: none;
+    @media (max-width: 768px) {
+      font-family: $fira-semibold;
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 10px;
+    }
+  }
+  &__excerpt {
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 274px;
+    @media (max-width: 768px) {
+      max-width: none;
+      height: 72px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      margin-bottom: 9px;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+  &__btn {
+    width: 100%;
+    display: block;
+    border-radius: 13px;
+    border: 1px solid $background_light_green;
+    padding: 16px;
+    text-align: center;
+
+    color: $background_light_green;
+    font-family: $font-black;
+    font-size: 14px;
+    line-height: normal;
+
+    transition: .3s;
+
+    z-index: 2;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: $background_dark_green;
+      color: $background_dark_green;
+    }
+
+    @media (max-width: 768px) {
+      padding: 11px 20px;
+      font-size: 12px;
+      line-height: normal;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .type-big {
+    .jackpot-slots__card_main {
+      width: 42%;
+      margin-right: 20px;
+      .jackpot-slot {
+        width: 100%;
+        height: 100%;
+        &__wrapper {
+          height: 100%;
+        }
+        &__body {
+          justify-content: space-between;
+        }
+        &__img {
+          height: 265px;
+        }
+        &__value {
+          margin-top: -45px;
+          border-radius: 0;
+          width: calc(100% + 68px);
+          border: none;
+        }
+        &__title {
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        &__excerpt {
+          margin-bottom: 60px;
+        }
+      }
+    }
+    .jackpot-slots__card_another {
+      width: calc(58% - 20px);
+      display: flex;
+      flex-direction: column;
+      .jackpot-slot {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &__wrapper {
+          display: flex;
+        }
+        &__img {
+          width: 220px;
+          height: 265px;
+        }
+        &__value {
+          margin-top: 0;
+          padding: 0;
+          background-color: transparent;
+          border: none;
+          margin-bottom: 18px;
+        }
+        &__title {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        &__excerpt {
+          margin-bottom: 18px;
+        }
+        &__body {
+          padding: 20px;
+          width: 100%;
+          flex: 1 1 0;
+        }
+        &__btn {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes logo-shine {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-110%);
+  }
+}

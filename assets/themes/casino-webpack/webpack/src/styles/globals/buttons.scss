@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  border-radius: 13px;
+  padding: 9px 20px;
+  background-color: $background_dark_green;
+  color: $white;
+  font-family: $fira-bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: .3s;
+  cursor: pointer;
+  &:hover {
+    background-color: $text_dark_green;
+  }
+  @media (max-width: 768px) {
+    font-size: 13px;
+    font-family: $fira-semibold;
+    line-height: normal;
+    padding: 12px 20px;
+  }
+}
+
+.btn-white {
+  display: inline-block;
+  border-radius: 13px;
+  padding: 8px 19px;
+  background-color: transparent;
+  border: 1px solid $white;
+  color: $white;
+  font-family: $font-black;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: .3s;
+  cursor: pointer;
+  &:hover {
+    background: rgba(255, 255, 255, 0.10);
+  }
+}

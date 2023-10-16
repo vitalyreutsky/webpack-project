@@ -1,0 +1,51 @@
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  input {
+    position: absolute;
+    opacity: 0;
+    left: 1000px;
+  }
+  label {
+    font-size: 10px;
+    line-height: normal;
+    color: #222222;
+    transition: all 0.3s;
+    position: relative;
+    padding-left: 24px;
+  }
+  &.error {
+    input[type=checkbox]:not(:checked)+label:before {
+      border: 1px solid $border_red;
+    }
+  }
+}
+
+.custom-checkbox label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: .3s;
+
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='8' viewBox='0 0 9 8' fill='none'%3E%3Cg id='Group 225391'%3E%3Crect id='Rectangle 4769' y='4.46875' width='1.39988' height='3.94158' transform='rotate(-45 0 4.46875)' fill='white'/%3E%3Crect id='Rectangle 4770' x='7.34717' y='0.71875' width='1.39775' height='7.84707' transform='rotate(45 7.34717 0.71875)' fill='white'/%3E%3C/g%3E%3C/svg%3E");
+
+}
+
+.custom-checkbox input[type=checkbox]:not(:checked)+label:before  {
+  border: 1px solid #D2D2D2;
+}
+
+.custom-checkbox input[type=checkbox]:checked+label:before, .custom-checkbox input[type=checkbox]:checked+label:before {
+  background-color: var(--Green, #47B68E);
+  border: 1px solid #47B68E;
+}

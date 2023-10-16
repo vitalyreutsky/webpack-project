@@ -1,0 +1,64 @@
+.table {
+  &__heading {
+    border-radius: 13px 13px 0 0;
+    color: $white;
+    font-family: $font-bold;
+    font-size: 12px;
+    line-height: normal;
+    text-transform: capitalize;
+    @media (max-width: 768px) {
+      border-radius: 0 ;
+      font-size: 12px;
+    }
+  }
+  &__row {
+    display: flex;
+  }
+  &__col {
+    box-sizing: content-box;
+    &:first-child {
+      width: calc(100% - 165px);
+      padding: 12.5px 12.5px 12.5px 30px;
+      flex: 1 1 0;
+      @media (max-width: 768px) {
+        width: calc(100% - 130px);
+        padding: 14px 16px 14px 16px;
+      }
+    }
+    &:last-child {
+      width: 165px;
+      padding: 12.5px 30px 12.5px 12.5px;
+      @media (max-width: 768px) {
+        width: 130px;
+        padding: 14px 16px 14px 4px;
+      }
+    }
+  }
+  &__body {
+    color:$text_black;
+    font-family: $fira-regular;
+    font-size: 15px;
+    line-height: 140%;
+    @media (max-width: 768px) {
+      p {
+        font-size: 14px;
+      }
+    }
+    .table__row {
+      border-right: 1px solid $border_gray;
+      border-left: 1px solid $border_gray;
+      &:nth-child(odd) {
+        background: #F9FAF9;
+      }
+      &:last-child {
+        padding-bottom: 10px;
+        border-radius: 0 0 13px 13px;
+        border-bottom: 1px solid $border_gray;
+        @media (max-width: 768px) {
+          border-radius: 0 ;
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}

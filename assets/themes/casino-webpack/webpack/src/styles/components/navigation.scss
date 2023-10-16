@@ -1,0 +1,181 @@
+.main section.navigation {
+  margin: -30px 0 30px;
+  @media (max-width: 768px) {
+    margin: 0 0 30px;
+  }
+}
+
+.navigation {
+  .wrapper {
+    @media (max-width: 768px) {
+      position: relative;
+      overflow-x: visible !important;
+      overflow-y: visible !important;
+    }
+  }
+  .custom-select__selected {
+    display: none;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      display: block;
+      padding: 10px 10px 0;
+      border-radius: 8px;
+      border: 1px solid $border_gray;
+      background: $white;
+      position: relative;
+      transition: .3s;
+      p {
+        padding-bottom: 10px;
+      }
+      &.show {
+        border-radius: 8px 8px 0 0;
+        border-bottom: none;
+        padding-bottom: 0;
+        p {
+          border-bottom: 1px solid #F4F5F3;
+        }
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+      svg {
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        transition: .3s;
+      }
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 10px;
+      display: none;
+      position: absolute;
+      width: calc(100% - 32px);
+      z-index: 10;
+      &.show {
+        display: block;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid $border_gray;
+        border-top: none;
+        background: $white;
+        padding: 10px 20px 7px;
+      }
+      .navigation__card {
+        width: 100% !important;
+      }
+    }
+    &.cards-2 {
+      .navigation__card {
+        width: calc(50% - 8px);
+      }
+    }
+    &.cards-3, &.cards-6 {
+      .navigation__card {
+        width: calc(33% - 10px);
+      }
+    }
+    &.cards-4, &.cards-8  {
+      .navigation__card {
+        width: calc(25% - 12px);
+      }
+    }
+    &.cards-5, &.cards-10 {
+      .navigation__card {
+        width: calc(20% - 12px);
+      }
+    }
+    &.cards-7 {
+      .navigation__card {
+        width: calc(25% - 12px);
+        &:nth-child(5), &:nth-child(6), &:nth-child(7) {
+          width: calc(33% - 10px);
+        }
+      }
+    }
+    &.cards-9 {
+      .navigation__card {
+        width: calc(20% - 12px);
+        &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9) {
+          width: calc(25% - 12px);
+        }
+      }
+    }
+
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+    border: 1px solid $border_gray;
+    background: #FFF;
+    overflow: hidden;
+    padding-right: 30px;
+    position: relative;
+    @media (max-width: 768px) {
+      border: none;
+      border-radius: 0;
+      padding-right: 0;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+      .navigation__image {
+        transform: scale(0.8);
+      }
+    }
+    &:before {
+      content: '';
+      display: block;
+      width: 9px;
+      height: 15px ;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='16' viewBox='0 0 9 16' fill='none'%3E%3Crect x='1.92651' y='15.0713' width='2.0041' height='10.0032' transform='rotate(-135 1.92651 15.0713)' fill='%2347B68E'/%3E%3Crect x='0.516113' y='2.34473' width='2.00175' height='9.99613' transform='rotate(-45 0.516113 2.34473)' fill='%2347B68E'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: .3s;
+      @media (max-width: 768px) {
+        content: none;
+      }
+    }
+  }
+  &__image {
+    width: 70px;
+    height: 70px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    transition: .3s;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__text {
+    flex: 1 1 0;
+  }
+  &__title {}
+  &__desc {
+    font-size: 10px;
+    line-height: 140%;
+    margin-top: 5px;
+    @media (max-width: 768px) {
+      margin-top: 3px;
+    }
+  }
+}

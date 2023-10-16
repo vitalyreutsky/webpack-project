@@ -1,0 +1,93 @@
+.faq {
+  .wrapper {
+
+  }
+  &__title {
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      font-family: $font-bold;
+      font-size: 20px;
+      line-height: 150%;
+    }
+  }
+  &__desc {
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+      margin-bottom: 23px;
+    }
+  }
+  &__list {}
+  &__elem {
+    padding: 20px;
+    margin-bottom: 10px;
+    @media (max-width: 768px) {
+      padding: 16px 12px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__question {
+    text-transform: none;
+    line-height: normal;
+    position: relative;
+    cursor: pointer;
+    font-family: $font-bold;
+    &:before {
+      content: '';
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='27' viewBox='0 0 27 27' fill='none'%3E%3Cpath d='M6.33017 18.6941C6.54165 18.89 6.82843 19 7.12745 19C7.42648 19 7.71326 18.89 7.92473 18.6941L13.5068 13.5221L19.0889 18.6941C19.3016 18.8844 19.5864 18.9897 19.8821 18.9873C20.1778 18.985 20.4606 18.8751 20.6697 18.6814C20.8788 18.4876 20.9974 18.2256 21 17.9516C21.0025 17.6776 20.8889 17.4137 20.6834 17.2167L14.3041 11.3059C14.0926 11.11 13.8058 11 13.5068 11C13.2078 11 12.921 11.11 12.7095 11.3059L6.33017 17.2167C6.11876 17.4126 6 17.6783 6 17.9554C6 18.2324 6.11876 18.4981 6.33017 18.6941Z' fill='%232E2E2E'/%3E%3C/svg%3E");
+      background-size: contain;
+      display: block;
+      width: 22px;
+      height: 22px;
+      position: absolute;
+      right: 0;
+      transform: rotate(180deg);
+      opacity: .5;
+      transition: .3s;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+    &.active {
+      &:before {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+      padding-bottom: 15px;
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: normal;
+      padding-right: 26px;
+      &:before {
+        top: 50%;
+        transform: rotate(180deg) translateY(50%);
+        transition: none;
+      }
+      &.active {
+        &:before {
+          transform: rotate(0deg) translateY(-100%);
+        }
+      }
+    }
+  }
+  &__answer {
+    max-height: 0;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 150%;
+    }
+    &.active {
+      padding: 15px 0 0;
+      border-top: 1px solid $border_gray;
+      max-height: 1720px;
+      @media (max-width: 768px) {
+        padding: 8px 0 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.expert-card {
+  max-width: 498px;
+  padding: 20px;
+  @media (max-width: 768px) {
+    max-width: none;
+    padding: 12px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      margin-bottom: 12px;
+    }
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    width: 60px;
+    height: 64px;
+    border-radius: 60px;
+    display: flex;
+    margin-right: 24px;
+    padding-bottom: 4px;
+    position: relative;
+    @media (max-width: 768px) {
+      width: 48px;
+      height: 48px;
+      margin-right: 20px;
+      padding-bottom: 0;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      bottom: -2px;
+      right: -4px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M8.58226 2.19079C9.24772 1.16247 10.7523 1.16247 11.4177 2.19079C11.852 2.86188 12.6974 3.13655 13.4432 2.84889C14.586 2.40811 15.8032 3.29246 15.7371 4.51554C15.694 5.31374 16.2164 6.03282 16.9889 6.23847C18.1725 6.5536 18.6375 7.98451 17.8651 8.93517C17.3611 9.55558 17.3611 10.4444 17.8651 11.0648C18.6375 12.0155 18.1725 13.4464 16.9889 13.7615C16.2164 13.9672 15.694 14.6863 15.7371 15.4845C15.8032 16.7075 14.586 17.5919 13.4432 17.1511C12.6974 16.8635 11.852 17.1381 11.4177 17.8092C10.7523 18.8375 9.24772 18.8375 8.58226 17.8092C8.14797 17.1381 7.30264 16.8635 6.55683 17.1511C5.41403 17.5919 4.19683 16.7075 4.26289 15.4845C4.306 14.6863 3.78355 13.9672 3.0111 13.7615C1.82748 13.4464 1.36254 12.0155 2.13489 11.0648C2.63894 10.4444 2.63894 9.55558 2.13489 8.93517C1.36254 7.98451 1.82748 6.5536 3.0111 6.23847C3.78355 6.03282 4.306 5.31374 4.26289 4.51554C4.19683 3.29246 5.41403 2.40811 6.55683 2.84889C7.30264 3.13655 8.14797 2.86188 8.58226 2.19079Z' fill='%2341A682'/%3E%3Cpath d='M8.62579 13.5708L6 10.945L7.19662 9.74841L8.62579 11.1818L12.8034 7L14 8.19662L8.62579 13.5708Z' fill='white'/%3E%3C/svg%3E");
+      @media (max-width: 768px) {
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+      }
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__text {}
+  &__name {
+    color: $text_black;
+    font-family: $font-bold;
+    font-size: 18px;
+    line-height: 150%;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 140%;
+      font-family: $fira-semibold;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M5.5 3.5H10.5V14.5H5.5V3.5Z' fill='%23E6E7E8'/%3E%3Cpath d='M2.5 3.5C0.84325 3.5 0 4.73125 0 6.25V11.75C0 13.2688 0.84325 14.5 2.5 14.5H5.5V3.5H2.5Z' fill='%2329B473'/%3E%3Cpath d='M13.5 3.5H10.5V14.5H13.5C15.1567 14.5 16 13.2688 16 11.75V6.25C16 4.73125 15.1567 3.5 13.5 3.5Z' fill='%23EC1C24'/%3E%3C/svg%3E");
+      margin-left: 10px;
+    }
+  }
+  &__secondary {
+    color: $text_super_light;
+    font-family: $fira-regular;
+    font-size: 11px;
+    line-height: 150%;
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 140%;
+    }
+  }
+  &__autograph {
+    width: 81px;
+    height: 56px;
+    display: flex;
+    @media (max-width: 768px) {
+      width: 62px;
+      height: 44px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__desc {
+    font-size: 12px;
+    font-family: $fira-italic;
+    line-height: 170%;
+    letter-spacing: -0.2px;
+  }
+}

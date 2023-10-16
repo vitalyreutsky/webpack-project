@@ -1,0 +1,45 @@
+.jackpot-slots {
+  .wrapper {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper {
+
+  }
+  &__top {
+    padding: 20px;
+    border-bottom: 1px solid var(--stroke-gray, #D2D2D2);
+    @media (max-width: 768px) {
+      padding: 20px 16px 15px;
+    }
+  }
+  &__title {
+    font-family: $font-bold;
+    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 150%;
+      text-align: left;
+    }
+  }
+  &__cards {
+    padding: 20px 30px 30px;
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 20px 12px 30px;
+      .jackpot-slot {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .type-regular {}
+    .type-big {
+      .jackpot-slots__card_main {}
+      .jackpot-slots__card_another {}
+    }
+  }
+}

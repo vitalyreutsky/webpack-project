@@ -1,0 +1,25 @@
+.rating {
+  display: flex;
+  &__text {
+    margin-right: 10px;
+    span {
+      color: #464646;
+      font-family: $font-black;
+      font-size: 16px;
+      line-height: normal;
+
+    }
+    color: #898989;
+    font-family: $font-regular;
+    font-size: 10px;
+    line-height: normal;
+
+  }
+  &__stars {
+    display: flex;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

@@ -1,0 +1,380 @@
+.content-block {
+  @media (max-width: 768px) {
+    .wrapper {
+      padding-left: 0;
+      padding-right: 0;
+      overflow-x: visible !important;
+    }
+    &.full-size-mobile {
+
+    }
+    .full-size.block-table ~ p {
+      margin-top: 15px;
+    }
+    &.mobile-reverse {
+      .content-block__wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        p {
+          &:first-child {
+            margin-top: 16px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .wrapper {}
+  section {
+    .wrapper {
+      overflow: visible;
+      padding: 0;
+    }
+    .wrapper-white:not(.expert-card, .plus-minus__wrapper, .horizontal-bonus, .slots-list__wrapper, .slot-card__wrapper) {
+      padding: 0;
+      border-radius: 0;
+      border: none;
+      background: transparent;
+    }
+    margin-bottom: 0;
+  }
+  &__wrapper {
+    padding: 30px;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
+  p {
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      margin-bottom: 15px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .plus-minus {
+    margin: 30px 0;
+    @media (max-width: 768px) {
+      margin: 20px -17px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+      @media (max-width: 768px) {
+        margin-bottom: -17px;
+      }
+    }
+    .plus-minus__top .plus__heading {
+      background-color: #F1F1F1;
+      color: #2E2E2E;
+    }
+    .plus-minus__top .minus__heading {
+      background-color: #F1F1F1;
+      color: #2E2E2E;
+    }
+  }
+  .bonuses-list {
+    @media (max-width: 768px) {
+      margin: 0 -5px;
+    }
+  }
+  .slot-bonus, .diagrams, .steps, .notices, .block-cards, .bonuses-simple, .top-slots {
+    margin: 30px 0;
+    @media (max-width: 768px) {
+      margin: 15px 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .block-cards, .notices, .steps, .bonuses-simple, .top-slots {
+    @media (max-width: 768px) {
+      margin: 15px -4px;
+    }
+  }
+  .numeric, .hot-cold {
+    margin: 20px 0 30px;
+    @media (max-width: 768px) {
+      margin: 15px -4px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .block-table {
+    @media (max-width: 768px) {
+      margin: 15px -16px 15px 0;
+      padding: 0 16px 0 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .block-image.full-size-mobile {
+    @media (max-width: 768px) {
+      img {
+        width: 100% !important;
+      }
+    }
+  }
+  .alignright {
+    float: right;
+    margin-left: 20px;
+    display: flex;
+    @media (max-width: 768px) {
+      float: none;
+      margin-left: 0;
+      display: flex;
+      margin-bottom: 15px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .alignleft {
+    float: left;
+    margin-right: 20px;
+    display: flex;
+    @media (max-width: 768px) {
+      float: none;
+      margin-right: 0;
+      display: flex;
+      margin-bottom: 15px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+  .block-image.alignleft-mobile {
+    @media (max-width: 768px) {
+      &.alignleft {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .block-image.alignright-mobile {
+    @media (max-width: 768px) {
+      &.alignright {
+        float: right;
+        margin-left: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .block-columns {
+    display: flex;
+    margin: 0 -10px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    .block-column {
+      width: 100%;
+      padding: 10px;
+      .alignleft, .alignright {
+        margin-bottom: 0;
+      }
+      &:first-child {}
+      &.is-vertically-aligned-center {
+        display: flex;
+        align-items: center;
+      }
+      .block-image {
+        figure:not(.alignright, .alignleft) {
+          display: flex;
+          width: 100%;
+          height: 100%;
+        }
+        img {
+          margin-right: 20px;
+        }
+        @media (max-width: 768px) {
+          figure.alignleft, figure.alignright {
+            margin-right: 10px;
+            margin-bottom: 0;
+            img {
+              max-width: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  .content-block, .block-group {
+    .block-columns .block-column .block-image figure.alignleft {
+      float: left;
+      width: auto;
+      img {
+        margin: 0;
+      }
+    }
+    .block-columns .block-column .block-image figure.alignright {
+      float: right;
+      width: auto;
+      img {
+        margin: 0;
+      }
+    }
+  }
+  .content-block {
+    .block-image {
+      display: flex;
+      figure {
+        display: flex;
+      }
+    }
+  }
+  .block-group {
+    padding: 20px;
+    border-radius: 13px;
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      padding: 16px;
+      border-radius: 8px;
+    }
+    &.no-padding {
+      padding: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .block-group {
+      padding: 0;
+    }
+    .block-column.wrapper-white {
+      margin-bottom: 10px;
+      box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.08), 0px 0px 6px rgba(0, 0, 0, 0.1);
+      &:nth-child(1n) {
+        margin-right: 20px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      figure.alignright {
+        float: right;
+        margin-left: 10px;
+      }
+      figure.alignleft {
+        float: left;
+        margin-right: 10px;
+      }
+    }
+  }
+  .content-block {
+    .content-block__wrapper {
+      padding: 10px;
+    }
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .horizontal-bonus {
+    .horizontal-bonus__tabs {
+      padding: 0 20px;
+    }
+  }
+  .slots-list {
+    margin-bottom: 20px;
+    @media (max-width: 768px) {
+      margin: 0 -16px 15px;
+      &:first-child {
+        margin-top: -30px;
+      }
+      .slots-list__wrapper {
+        padding: 12px !important;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .slots-list__wrapper {
+      padding: 0 30px;
+      border: none;
+      overflow: hidden;
+      .slot-card__promo {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .prices-casino {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .prices-casino__wrapper {
+      padding: 0;
+      border: none;
+      overflow: hidden;
+    }
+  }
+
+  .experts-cards {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .expert-card {
+    h1, h2, h3, h4, h5, p {
+      margin-bottom: 0;
+    }
+  }
+
+
+
+  ul {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li:not(.plus-minus__elem, .menu-item) {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &:before {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        background-color: #47B68E;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 9px;
+      }
+    }
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    li {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .not-float {
+    clear: both;
+  }
+  h2.top-bonuses__title {
+    margin-bottom: 34px;
+  }
+}

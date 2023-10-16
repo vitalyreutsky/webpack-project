@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "Lato-Black";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Black.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Black.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Bold.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Bold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Lato-Regular";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Regular.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Lato-Light";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Light.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/Lato-Light.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Light";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Light.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Light.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Regular";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Regular.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Regular.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-SemiBold";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-SemiBold.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-SemiBold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Medium";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Medium.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Medium.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-SemiBold";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-SemiBold.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-SemiBold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Bold";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Bold.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Bold.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "FiraSans-Black";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Black.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "FiraSans-Italic";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Italic.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/FFiraSans-Italic.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "MeowScript";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("/assets/themes/casino-webpack/webpack/src/fonts/MeowScript-Regular.woff2")
+      format("woff2"),
+    url("/assets/themes/casino-webpack/webpack/src/fonts/MeowScript-Regular.woff")
+      format("woff");
+}
+
+$font-regular: "Lato-Regular";
+$font-light: "Lato-Light";
+$font-bold: "Lato-Bold";
+$font-black: "Lato-Black";
+$meow: "MeowScript";
+
+$fira-light: "FiraSans-Light";
+$fira-regular: "FiraSans-Regular";
+$fira-semibold: "FiraSans-SemiBold";
+$fira-italic: "FiraSans-Italic";
+$fira-bold: "FiraSans-Bold";
+$fira-black: "FiraSans-Black";
+$fire-medium: "FiraSans-Medium";

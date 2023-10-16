@@ -1,0 +1,168 @@
+.hot-cold-slot {
+  p, h3, h4, h5 {
+    margin-bottom: 0;
+  }
+  border-radius: 6px;
+  border: 1px solid $border_gray;
+  background: $white;
+  display: flex;
+  padding: 5px 10px 5px 5px;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &__icon {
+    border-radius: 4px;
+    width: 117px;
+    height: 85px;
+    display: flex;
+    overflow: hidden;
+    margin-right: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (max-width: 768px) {
+      height: 100%;
+      min-height: 110px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex: 1 1 0;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__content {
+    max-width: 210px;
+    width: 210px;
+    margin-right: 30px;
+    padding-top: 5px;
+    @media (max-width: 768px) {
+      max-width: none;
+      width: auto;
+      margin-top: 0;
+      margin-right: 0;
+    }
+  }
+  &__provider {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+      margin-bottom: 5px;
+    }
+    .provider {
+      &__icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        overflow: hidden;
+        margin-right: 8px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__name {
+        font-size: 14px;
+        line-height: 140%;
+        @media (max-width: 768px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  &__name {
+    font-family: $fira-semibold;
+    font-size: 16px;
+    line-height: 140%;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+  &__mode {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+  }
+  &__rtp, &__volatility {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .value {
+      font-family: $fira-semibold;
+      font-size: 16px;
+      line-height: 140%;
+      @media (max-width: 768px) {
+        font-size: 12px;
+      }
+    }
+    .label {
+      font-size: 12px;
+      line-height: 140%;
+      text-align: center;
+      @media (max-width: 768px) {
+        font-size: 10px;
+        text-align: left;
+        margin-bottom: 4px !important;
+      }
+    }
+  }
+  &__rtp {
+    margin-right: 18px;
+    @media (max-width: 768px) {
+      margin-right: 20px;
+    }
+    .value {
+      color: $background_light_green;
+    }
+  }
+  &__volatility {
+    .value {
+      display: flex;
+      align-items: center;
+      &:before {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 13px;
+        margin-right: 5px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='14' viewBox='0 0 6 14' fill='none'%3E%3Crect x='2.5' y='13.5' width='10' height='1' transform='rotate(-90 2.5 13.5)' fill='%2347B68E'/%3E%3Cpath d='M3 0.5L5.16506 5L0.834937 5L3 0.5Z' fill='%2347B68E'/%3E%3C/svg%3E");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      &.med {
+        &:before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='2' viewBox='0 0 5 2' fill='none'%3E%3Crect x='5' y='1.5' width='5' height='1' transform='rotate(-180 5 1.5)' fill='%23CAAA17'/%3E%3C/svg%3E");
+          width: 5px;
+          height: 1px;
+        }
+      }
+      &.low-med, &.low {
+        &:before {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='5' height='14' viewBox='0 0 5 14' fill='none'%3E%3Crect width='10' height='1' transform='matrix(-4.37114e-08 1 1 4.37114e-08 2 0.5)' fill='%23EC1C24'/%3E%3Cpath d='M2.5 13.5L4.66506 9L0.334937 9L2.5 13.5Z' fill='%23EC1C24'/%3E%3C/svg%3E");
+        }
+      }
+    }
+  }
+}

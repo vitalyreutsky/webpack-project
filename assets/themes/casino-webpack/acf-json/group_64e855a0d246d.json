@@ -1,0 +1,169 @@
+{
+    "key": "group_64e855a0d246d",
+    "title": "Slots Options",
+    "fields": [
+        {
+            "key": "field_64e855aeba592",
+            "label": "RTP",
+            "name": "rtp",
+            "type": "number",
+            "instructions": "%",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 0,
+            "max": 100,
+            "step": "0.01"
+        },
+        {
+            "key": "field_64e8ad683a941",
+            "label": "Jackpot Value",
+            "name": "jackpot_value",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6512d4ac078a0",
+            "label": "Provider Name",
+            "name": "provider_name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6512d4bd078a1",
+            "label": "Provider Icon",
+            "name": "provider_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6512d4d1078a2",
+            "label": "Volatility",
+            "name": "volatility",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "low": "Low",
+                "med-high": "Med-High",
+                "high": "High",
+                "med": "Medium",
+                "low-med": "Low-Med",
+                "n\/a": "N\/A",
+                "adjusted": "ADJUSTED"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_651d6f6759d94",
+            "label": "Game Type",
+            "name": "game_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "video_slots": "Video Slots",
+                "card_games": "Card Games",
+                "other_types": "Other Types",
+                "scatch_tickets": "Scatch Tickets",
+                "live_casino": "Live Casino",
+                "roulette_games": "Roulette Games",
+                "classic slots": "Classic Slots",
+                "dice_games": "Dice Games"
+            },
+            "default_value": "video_slots",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "array",
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "slots"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1696428098
+}

@@ -1,0 +1,190 @@
+.rtp-casino {
+  &.table-right {}
+  &.table-left {
+    .rtp-casino__wrapper {
+      flex-direction: row-reverse;
+    }
+    .rtp-casino__img {
+      margin-right: 0;
+      margin-left: 80px;
+    }
+  }
+  .wrapper {
+    overflow: hidden;
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper {
+    padding: 30px;
+    overflow: hidden;
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 16px 16px 0;
+    }
+  }
+  &__img {
+    display: flex;
+    width: 500px;
+    margin-right: 80px;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__table {
+    @media (max-width: 768px) {
+      margin: 0 -16px;
+    }
+    &_wrapper {
+      width: 100%;
+      flex: 1 1 0;
+    }
+    &_heading {
+      display: flex;
+      justify-content: space-between;
+      .rtp-casino__table_col {
+        color: $text_light;
+        font-size: 12px;
+        line-height: 120%;
+        &:first-child {
+          padding: 10px 10px 10px 30px;
+          @media (max-width: 768px) {
+            padding: 10px 10px 10px 16px;
+          }
+        }
+        &:last-child {
+          padding: 10px 30px 10px 10px;
+          display: flex;
+          align-items: center;
+          @media (max-width: 768px) {
+            padding: 10px 16px 10px 10px;
+          }
+          .tooltip-icon {
+            margin-left: 12px;
+          }
+        }
+      }
+    }
+    &_row {
+      display: flex;
+      justify-content: space-between;
+      &:nth-child(odd) {
+        background: #F9FAF9;
+      }
+      &:nth-child(1) {
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='27' viewBox='0 0 20 27' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 18.7146V25.5229C5 26.2304 5.71453 26.7141 6.37139 26.4514L10 25L13.6286 26.4514C14.2855 26.7141 15 26.2304 15 25.5229V18.7146C14.7169 18.734 14.4224 18.6934 14.1318 18.5813C13.2368 18.2361 12.2224 18.5657 11.7013 19.371C10.9027 20.605 9.09727 20.605 8.29872 19.371C7.77757 18.5657 6.76317 18.2361 5.8682 18.5813C5.57764 18.6934 5.28308 18.734 5 18.7146Z' fill='%23C07070'/%3E%3Cpath d='M8.58226 2.19079C9.24772 1.16247 10.7523 1.16247 11.4177 2.19079C11.852 2.86188 12.6974 3.13655 13.4432 2.84889C14.586 2.40811 15.8032 3.29246 15.7371 4.51554C15.694 5.31374 16.2164 6.03282 16.9889 6.23847C18.1725 6.5536 18.6375 7.98451 17.8651 8.93517C17.3611 9.55558 17.3611 10.4444 17.8651 11.0648C18.6375 12.0155 18.1725 13.4464 16.9889 13.7615C16.2164 13.9672 15.694 14.6863 15.7371 15.4845C15.8032 16.7075 14.586 17.5919 13.4432 17.1511C12.6974 16.8635 11.852 17.1381 11.4177 17.8092C10.7523 18.8375 9.24772 18.8375 8.58226 17.8092C8.14797 17.1381 7.30264 16.8635 6.55683 17.1511C5.41403 17.5919 4.19683 16.7075 4.26289 15.4845C4.306 14.6863 3.78355 13.9672 3.0111 13.7615C1.82748 13.4464 1.36254 12.0155 2.13489 11.0648C2.63894 10.4444 2.63894 9.55558 2.13489 8.93517C1.36254 7.98451 1.82748 6.5536 3.0111 6.23847C3.78355 6.03282 4.306 5.31374 4.26289 4.51554C4.19683 3.29246 5.41403 2.40811 6.55683 2.84889C7.30264 3.13655 8.14797 2.86188 8.58226 2.19079Z' fill='%23BEB941'/%3E%3Crect x='9' y='8' width='2' height='4' rx='1' fill='white'/%3E%3C/svg%3E");
+          position: absolute;
+          left: -10px;
+          top: 10px;
+          width: 20px;
+          height: 26.52px;
+          @media (max-width: 768px) {
+            left: unset;
+            right: 89px;
+            top: 13px;
+            width: 15px;
+            height: 19.94px;
+            background-size: cover;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='27' viewBox='0 0 20 27' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 18.7146V25.5229C5 26.2304 5.71453 26.7141 6.37139 26.4514L10 25L13.6286 26.4514C14.2855 26.7141 15 26.2304 15 25.5229V18.7146C14.7169 18.734 14.4224 18.6934 14.1318 18.5813C13.2368 18.2361 12.2224 18.5657 11.7013 19.371C10.9027 20.605 9.09727 20.605 8.29872 19.371C7.77757 18.5657 6.76317 18.2361 5.8682 18.5813C5.57764 18.6934 5.28308 18.734 5 18.7146Z' fill='%23C07070'/%3E%3Cpath d='M8.58226 2.19079C9.24772 1.16247 10.7523 1.16247 11.4177 2.19079C11.852 2.86188 12.6974 3.13655 13.4432 2.84889C14.586 2.40811 15.8032 3.29246 15.7371 4.51554C15.694 5.31374 16.2164 6.03282 16.9889 6.23847C18.1725 6.5536 18.6375 7.98451 17.8651 8.93517C17.3611 9.55558 17.3611 10.4444 17.8651 11.0648C18.6375 12.0155 18.1725 13.4464 16.9889 13.7615C16.2164 13.9672 15.694 14.6863 15.7371 15.4845C15.8032 16.7075 14.586 17.5919 13.4432 17.1511C12.6974 16.8635 11.852 17.1381 11.4177 17.8092C10.7523 18.8375 9.24772 18.8375 8.58226 17.8092C8.14797 17.1381 7.30264 16.8635 6.55683 17.1511C5.41403 17.5919 4.19683 16.7075 4.26289 15.4845C4.306 14.6863 3.78355 13.9672 3.0111 13.7615C1.82748 13.4464 1.36254 12.0155 2.13489 11.0648C2.63894 10.4444 2.63894 9.55558 2.13489 8.93517C1.36254 7.98451 1.82748 6.5536 3.0111 6.23847C3.78355 6.03282 4.306 5.31374 4.26289 4.51554C4.19683 3.29246 5.41403 2.40811 6.55683 2.84889C7.30264 3.13655 8.14797 2.86188 8.58226 2.19079Z' fill='%2397BDC2'/%3E%3Crect x='7.50439' y='8' width='2' height='4' rx='1' fill='white'/%3E%3Crect x='10.4956' y='8' width='2' height='4' rx='1' fill='white'/%3E%3C/svg%3E");
+          position: absolute;
+          left: -10px;
+          top: 10px;
+          width: 20px;
+          height: 26.52px;
+          @media (max-width: 768px) {
+            left: unset;
+            right: 89px;
+            top: 13px;
+            width: 15px;
+            height: 19.94px;
+            background-size: cover;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        position: relative;
+        &:before {
+          content: '';
+          display: block;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='27' viewBox='0 0 20 27' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 18.7146V25.5229C5 26.2304 5.71453 26.7141 6.37139 26.4514L10 25L13.6286 26.4514C14.2855 26.7141 15 26.2304 15 25.5229V18.7146C14.7169 18.734 14.4224 18.6934 14.1318 18.5813C13.2368 18.2361 12.2224 18.5657 11.7013 19.371C10.9027 20.605 9.09727 20.605 8.29872 19.371C7.77757 18.5657 6.76317 18.2361 5.8682 18.5813C5.57764 18.6934 5.28308 18.734 5 18.7146Z' fill='%23C07070'/%3E%3Cpath d='M8.58226 2.19079C9.24772 1.16247 10.7523 1.16247 11.4177 2.19079C11.852 2.86188 12.6974 3.13655 13.4432 2.84889C14.586 2.40811 15.8032 3.29246 15.7371 4.51554C15.694 5.31374 16.2164 6.03282 16.9889 6.23847C18.1725 6.5536 18.6375 7.98451 17.8651 8.93517C17.3611 9.55558 17.3611 10.4444 17.8651 11.0648C18.6375 12.0155 18.1725 13.4464 16.9889 13.7615C16.2164 13.9672 15.694 14.6863 15.7371 15.4845C15.8032 16.7075 14.586 17.5919 13.4432 17.1511C12.6974 16.8635 11.852 17.1381 11.4177 17.8092C10.7523 18.8375 9.24772 18.8375 8.58226 17.8092C8.14797 17.1381 7.30264 16.8635 6.55683 17.1511C5.41403 17.5919 4.19683 16.7075 4.26289 15.4845C4.306 14.6863 3.78355 13.9672 3.0111 13.7615C1.82748 13.4464 1.36254 12.0155 2.13489 11.0648C2.63894 10.4444 2.63894 9.55558 2.13489 8.93517C1.36254 7.98451 1.82748 6.5536 3.0111 6.23847C3.78355 6.03282 4.306 5.31374 4.26289 4.51554C4.19683 3.29246 5.41403 2.40811 6.55683 2.84889C7.30264 3.13655 8.14797 2.86188 8.58226 2.19079Z' fill='%2387832D'/%3E%3Crect x='9' y='8' width='2' height='4' rx='1' fill='white'/%3E%3Crect x='12' y='8' width='2' height='4' rx='1' fill='white'/%3E%3Crect x='6' y='8' width='2' height='4' rx='1' fill='white'/%3E%3C/svg%3E");
+          position: absolute;
+          left: -10px;
+          top: 10px;
+          width: 20px;
+          height: 26.52px;
+          @media (max-width: 768px) {
+            left: unset;
+            right: 89px;
+            top: 13px;
+            width: 15px;
+            height: 19.94px;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    &_col {
+      span {}
+      &:first-child {
+        padding: 12px 10px 12px 30px;
+        @media (max-width: 768px) {
+          padding: 14px 10px 14px 16px;
+        }
+      }
+      &:last-child {
+        padding: 12px 30px 12px 10px;
+        width: 90px;
+        @media (max-width: 768px) {
+          padding: 14px 16px 14px 10px;
+        }
+      }
+    }
+    &_casino {
+      font-family: $fire-medium;
+      font-size: 15px;
+      line-height: normal;
+      color: $text_black;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+    &_rtp {
+      font-size: 15px;
+      line-height: normal;
+      @media (max-width: 768px) {
+        font-size: 14px;
+      }
+    }
+  }
+  &__title {
+    margin: 0 30px 10px;
+    font-family: $font-black;
+    font-size: 20px;
+    line-height: 150%;
+    @media (max-width: 768px) {
+      margin: 0 0 10px;
+    }
+  }
+}

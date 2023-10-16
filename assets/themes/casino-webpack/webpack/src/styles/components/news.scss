@@ -1,0 +1,103 @@
+.news {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      padding-left: 12px;
+      padding-right: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+  &__title {
+    font-family: $font-black;
+    font-size: 28px;
+    line-height: 150%;
+
+    text-align: center;
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+      margin-left: 4px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      text-align: left;
+    }
+  }
+  &__posts {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      .post-vertical-card {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        display: none;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3), {
+          display: block;
+        }
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    margin-top: 30px;
+
+    font-size: 14px;
+    border-radius: 13px;
+    border: 1px solid var(--stroke-gray, #D2D2D2);
+    background: #FFF;
+    padding: 9px 13px 9px 61px;
+    max-width: 290px;
+    width: 290px;
+    transition: .3s;
+    color: $text_black;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 0;
+      max-width: none;
+      justify-content: center;
+    }
+    &:after {
+      content: none;
+    }
+
+    .arrow {
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+      transition: .3s;
+      width: 80px;
+    }
+    .arrow-first {
+      width: 40px;
+      height: 1px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='1' viewBox='0 0 30 1' fill='none'%3E%3Cg clip-path='url(%23clip0_23_22)'%3E%3Crect width='10' height='1' fill='%2329B473'/%3E%3Crect x='10' width='10' height='1' fill='%23EAEAEA'/%3E%3Crect x='20' width='10' height='1' fill='%23EC1C24'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_22'%3E%3Crect width='30' height='1' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: .3s;
+    }
+    .arrow-second {
+      width: 5px;
+      height: 5px;
+      background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' class='arrow-second' width='5' height='5' viewBox='0 0 5 5' fill='none'%3E%3Cpath d='M5 2.5L0.5 4.66506L0.5 0.334936L5 2.5Z' fill='%23EC1C24'/%3E%3C/svg%3E");
+      margin-left: -1px;
+      transition: .3s;
+    }
+
+    &:hover {
+      border-color: $background_light_green;
+      .arrow {
+        margin-left: 12px;
+        width: 64px;
+      }
+      .arrow-first {
+        width: 60px;
+      }
+      .arrow-second {
+      }
+    }
+  }
+}

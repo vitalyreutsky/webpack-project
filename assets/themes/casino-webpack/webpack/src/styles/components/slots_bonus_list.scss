@@ -1,0 +1,15 @@
+.slot-bonus {
+  .wrapper {
+    @media (max-width: 768px) {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+  &__wrapper {
+    .slot-bonus-card {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

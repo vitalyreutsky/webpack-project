@@ -1,0 +1,91 @@
+.hover-link {
+  transition: .3s;
+  width: auto !important;
+  cursor: pointer;
+  display: inline-block;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: relative;
+    top: -5px;
+    display: block;
+    background: $background_light_green;
+    transform: translateY(3px) scale(0);
+    transition: .3s;
+  }
+  &:hover {
+    color: $background_light_green;
+    &:after {
+      transform: translateY(3px) scale(1);
+    }
+  }
+  &.white {
+    &:after {
+      background: $white;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+
+  .spinner {
+    width: 20px;
+    height: 20px;
+    display: none;
+    border-radius: 50%;
+    border-left: .2rem solid transparent;
+    -moz-animation: rotating .8s linear infinite;
+    -webkit-animation: rotating .8s linear infinite;
+    animation: rotating .8s linear infinite;
+  }
+}
+
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.animation-sending {
+  .spinner {
+    border-top: .2rem solid;
+    border-right: .2rem solid;
+    border-bottom: .2rem solid;
+    display: inline-block;
+    margin-right: 1.5rem;
+  }
+}

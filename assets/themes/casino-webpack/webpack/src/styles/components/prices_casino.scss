@@ -1,0 +1,75 @@
+.prices-casino {
+  .wrapper {
+    @media (max-width: 768px) {
+      overflow-x: visible !important;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    padding: 30px;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      overflow: visible !important;
+      padding: 16px;
+    }
+  }
+  &__col {
+    flex: 1 1 0;
+    margin-right: 44px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+  }
+  &__title {}
+  &__text {
+    p {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .small-text {
+      @media (max-width: 768px) {
+        font-size: 10px;
+        line-height: 150%;
+      }
+    }
+  }
+  &__table {
+    margin-top: 10px;
+    width: 435px;
+    @media (max-width: 768px) {
+      width: calc(100% + 8px);
+      margin: 0 -4px 15px;
+    }
+    .table__col:last-child {
+      width: 50%;
+      text-align: center;
+      padding: 9px 10px 9px 20px;
+    }
+    .table__col:first-child {
+      width: 50%;
+      flex: auto;
+      padding: 9px 10px 9px 20px;
+    }
+    .table__heading {
+      text-transform: uppercase;
+      @media (max-width: 768px) {
+        border-radius: 8px 8px 0 0;
+      }
+    }
+    .table__heading, .table__body {
+      font-family: $font-regular;
+    }
+    .table__body .table__row:last-child {
+      padding-bottom: 0;
+    }
+    .table__body .table__row:last-child {
+      @media (max-width: 768px) {
+        border-radius: 0 0 8px 8px;
+      }
+    }
+  }
+}

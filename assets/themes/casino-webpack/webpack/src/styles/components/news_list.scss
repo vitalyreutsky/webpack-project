@@ -1,0 +1,164 @@
+.news-list {
+  &.type-left {}
+  &.type-right {}
+  .wrapper {
+    @media (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &__wrapper {
+    border-radius: 13px;
+    border: 1px solid $border_gray;
+    background: $white;
+    display: flex;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      border-radius: 8px 8px 0 0;
+    }
+  }
+  &__posts {
+    width: 658px;
+    background-color: #F9FAF9;
+    padding: 0 30px;
+    height: 524px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $background_light_green;
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      padding: 20px 12px;
+      border-top: 1px solid $border_gray;
+      .post-card-horizontal {
+        display: none;
+        margin-bottom: 10px;
+        &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+          display: block;
+        }
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  &__content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 60px 30px;
+    @media (max-width: 768px) {
+      padding: 20px 16px;
+    }
+  }
+  &__body {}
+  &__top {
+    display: flex;
+  }
+  &__title {
+    font-family: $font-black;
+    font-size: 28px;
+    line-height: 150%;
+
+    margin-bottom: 39px;
+    position: relative;
+    margin-right: 10px;
+    flex: 1 1 0;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      margin-bottom: 29px;
+      margin-right: 16px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='39' height='4' viewBox='0 0 39 4' fill='none'%3E%3Crect width='13' height='4' fill='%2329B473'/%3E%3Crect x='13' width='13' height='4' fill='%23EAEAEA'/%3E%3Crect x='26' width='13' height='4' fill='%23EC1C24'/%3E%3C/svg%3E");
+      width: 39px;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: -19px;
+      @media (max-width: 768px) {
+        bottom: -14px;
+      }
+    }
+  }
+  &__icon {
+    width: 145px;
+    height: 145px;
+    display: flex;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &__desc {}
+  &__btn {
+    position: absolute;
+    left: 40px;
+    bottom: 33px;
+    display: flex;
+    transition: .3s;
+    color: $text_black;
+    font-size: 14px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+    &.btn_mobile {
+      display: none;
+      @media (max-width: 768px) {
+        display: flex;
+        position: static;
+        justify-content: flex-end;
+        padding: 10px;
+      }
+    }
+    &:after {
+      content: none;
+    }
+
+    .arrow {
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      transition: .3s;
+    }
+    .arrow-first {
+      width: 30px;
+      height: 1px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='1' viewBox='0 0 30 1' fill='none'%3E%3Cg clip-path='url(%23clip0_23_22)'%3E%3Crect width='10' height='1' fill='%2329B473'/%3E%3Crect x='10' width='10' height='1' fill='%23EAEAEA'/%3E%3Crect x='20' width='10' height='1' fill='%23EC1C24'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_22'%3E%3Crect width='30' height='1' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: .3s;
+    }
+    .arrow-second {
+      width: 5px;
+      height: 5px;
+      background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' class='arrow-second' width='5' height='5' viewBox='0 0 5 5' fill='none'%3E%3Cpath d='M5 2.5L0.5 4.66506L0.5 0.334936L5 2.5Z' fill='%23EC1C24'/%3E%3C/svg%3E");
+      margin-left: -1px;
+      transition: .3s;
+    }
+
+    &:hover {
+      color: $background_light_green;
+      .arrow-first {
+        width: 64px;
+      }
+    }
+  }
+}

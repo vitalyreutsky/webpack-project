@@ -1,0 +1,17 @@
+// JS
+import 'jquery';
+import './elements/header'
+import './elements/navigation'
+import './elements/filter-bonus'
+import './elements/tooltip'
+import './elements/regions'
+import './elements/wp-table'
+import './elements/video-block'
+import './elements/faq'
+import './elements/form_contact'
+import './elements/popups'
+import './elements/formula'
+import './elements/free-spins'
+import './elements/bonus-page'
+// Styles
+import '../styles/main.scss'

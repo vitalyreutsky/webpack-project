@@ -1,0 +1,37 @@
+.hero {
+  .wrapper {
+    display: flex;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__subtitle {
+    color: $text_light_green;
+    font-family: $fira-semibold;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 5px;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  &__title {
+    margin-bottom: 10px;
+    text-transform: none;
+  }
+  &__desc {
+    line-height: 140%
+  }
+  &__text {
+    flex: 1 1 0;
+  }
+  &__expert {
+    margin-left: 30px;
+    width: 498px;
+    @media (max-width: 768px) {
+      margin-left: 0;
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,343 @@
+.summary-casino {
+  &.type-aside {
+    .wrapper {
+      display: flex;
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+    &.type-card-horizontal {
+      .summary-casino__list {
+        flex: 1 1 0;
+      }
+      .summary-casino__aside {
+        margin-right: 40px;
+      }
+    }
+    &.type-card-vertical {
+      .summary-casino__list {
+        flex: 1 1 0;
+        @media (max-width: 768px) {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+  &.type-table {
+    @media (max-width: 768px) {
+      .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .summary-casino__list.table .summary-casino__elem {
+        width: 100%;
+        margin-right: 0;
+        background: #F9FAF9;
+        padding: 10px 16px;
+        &:nth-child(4n) {
+          background-color: #F9FAF9;
+        }
+        &:nth-child(4n - 1) {
+          background-color: #F9FAF9;
+        }
+        &:nth-child(even) {
+          background-color: $white;
+        }
+        .summary-casino__status {
+          margin-right: 10px;
+          width: 53%;
+          font-size: 14px;
+          justify-content: flex-start;
+        }
+        .summary-casino__name {
+          margin-left: 10px;
+          width: 47%;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &.type-card-vertical {}
+  &.type-card-horizontal {}
+  .wrapper {}
+  &__aside {
+    width: 235px;
+    margin-right: 20px;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    &_top {
+      border-radius: 13px 13px 0 0;
+      background-color: $background_light_green;
+      padding: 10px 13px;
+      color: $white;
+      text-align: center;
+      font-family: $fira-semibold;
+      font-size: 16px;
+      line-height: 140%;
+      @media (max-width: 768px) {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      span {
+        max-height: 45px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        @media (max-width: 768px) {
+          max-width: 210px;
+        }
+      }
+    }
+    &_body {
+      border-radius: 0 0 13px 13px;
+      border-right: 1px solid $border_gray;
+      border-bottom: 1px solid $border_gray;
+      border-left: 1px solid $border_gray;
+      background-color: $white;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100% - 65px);
+      @media (max-width: 768px) {
+        padding: 20px;
+      }
+    }
+    &_title {
+      color: $text_dark;
+      font-family: $fira-semibold;
+      font-size: 32px;
+      line-height: normal;
+      margin-bottom: 10px;
+      @media (max-width: 768px) {
+        font-size: 24px;
+        margin-bottom: 14px;
+      }
+    }
+    &_subtitle {
+      color: $text_black;
+      font-size: 12px;
+      line-height: normal;
+    }
+  }
+  &__heading {
+    width: 100%;
+    border-radius: 13px 13px 0 0;
+    text-align: center;
+    border: 1px solid $border_gray;
+    background: $white;
+    padding: 15px;
+
+    color: $text_dark;
+    font-family: $fira-semibold;
+    font-size: 16px;
+    line-height: 140%;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    &.table {
+      width: 100%;
+      border-radius: 0 0 13px 13px;
+      border: 1px solid $border_gray;
+      border-top: none;
+      display: flex;
+      flex-wrap: wrap;
+      background: $white;
+      overflow: hidden;
+      .summary-casino__elem {
+        display: flex;
+        width: calc(50% - 10px);
+        padding: 10px 10px 15px;
+        background: #F9FAF9;
+        &:nth-child(4n) {
+          background-color: #FFF;
+        }
+        &:nth-child(4n - 1) {
+          background-color: #FFF;
+        }
+        &:nth-child(odd) {
+          margin-right: 20px;
+        }
+        .summary-casino__status {
+          width: calc(50% - 25px);
+          margin-right: 25px;
+          color: var(--text-h, #36413B);
+          font-size: 15px;
+          line-height: 140%;
+          justify-content: flex-end;
+        }
+        .summary-casino__name {
+          margin-left: 25px;
+          width: calc(50% - 25px);
+          justify-content: flex-start;
+        }
+        .summary-casino__link {
+          color: $text_dark_green;
+          font-family: $fira-semibold;
+          font-size: 16px;
+          line-height: 140%;
+          &:after {
+            background: $text_dark_green;
+          }
+          &:hover {
+            color: $text_dark_green;
+          }
+        }
+      }
+    }
+    &.aside {
+      &.type-vertical {
+        .summary-casino__elem {
+          width: 301px;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          border-radius: 13px;
+          border: 1px solid $border_gray;
+          overflow: hidden;
+          background: $white;
+          &:nth-last-child(2) {
+            margin-bottom: 0;
+          }
+          &:nth-last-child(3) {
+            margin-bottom: 0;
+          }
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+          @media (max-width: 768px) {
+            width: calc(50% - 5px);
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            &:nth-child(3n) {
+              margin-right: 10px;
+            }
+            &:nth-child(2n) {
+              margin-right: 0;
+            }
+            &:nth-last-child(2) {
+              margin-bottom: 0;
+            }
+            &:nth-last-child(3) {
+              margin-bottom: 10px;
+            }
+            &:nth-last-child(1) {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .summary-casino__status {
+          padding: 15.25px 10px;
+          font-size: 12px;
+          line-height: 140%;
+          border-bottom: 1px solid $border_gray;
+          background: #F9FAF9;
+          text-align: center;
+          @media (max-width: 768px) {
+            padding: 15.25px 0;
+          }
+        }
+        .summary-casino__name {
+          display: block;
+          font-family: $fira-semibold;
+          font-size: 18px;
+          line-height: 140%;
+          text-align: center;
+          padding: 11.25px 10px;
+          @media (max-width: 768px) {
+            font-family: $fire-medium;
+            font-size: 16px;
+          }
+        }
+      }
+      &.type-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+        .summary-casino__elem {
+          display: flex;
+          width: 442px;
+          margin-right: 40px;
+          margin-bottom: 10px;
+          border-radius: 13px;
+          border: 1px solid $border_gray;
+          background-color: $white;
+          overflow: hidden;
+          &:nth-child(even) {
+            margin-right: 0;
+          }
+          &:nth-last-child(2) {
+            margin-bottom: 0;
+          }
+          &:nth-last-child(1) {
+            margin-bottom: 0;
+          }
+          @media (max-width: 768px) {
+            width: 100%;
+            border-radius: 8px;
+            margin-right: 0;
+            margin-bottom: 5px;
+            &:nth-last-child(2) {
+              margin-bottom: 5px;
+            }
+          }
+          .summary-casino__status {
+            width: 50%;
+            padding: 12.75px 4px;
+            color: var(--text-h, #36413B);
+            text-align: center;
+            font-size: 15px;
+            line-height: 140%;
+            border-right: 1px solid $border_gray;
+            background-color: #F9FAF9;
+            @media (max-width: 768px) {
+              padding: 6px 10px;
+              font-size: 12px;
+              text-align: left;
+            }
+          }
+          .summary-casino__name {
+            width: 50%;
+
+            color: $text_dark;
+            font-family: $fira-semibold;
+            font-size: 18px;
+            line-height: 140%;
+            text-align: center;
+            padding: 10.25px 5px;
+            @media (max-width: 768px) {
+              padding: 13px 5px;
+              font-size: 14px;
+              font-family: $fire-medium;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link {
+    color: $text_black;
+  }
+}

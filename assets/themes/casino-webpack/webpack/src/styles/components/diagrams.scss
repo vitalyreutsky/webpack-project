@@ -1,0 +1,208 @@
+.diagrams {
+  .wrapper {
+    @media (max-width: 768px) {
+      overflow-x: visible !important;
+    }
+  }
+  &__wrapper {
+    @media (max-width: 768px) {
+      overflow-x: scroll;
+      margin-left: -16px;
+      padding-left: 16px;
+      padding-right: 16px;
+      margin-right: -16px;
+    }
+  }
+  &__list {
+    &.type-horizontal {
+      @media (max-width: 768px) {
+        margin-left: -4px;
+        margin-right: -4px;
+      }
+      .diagrams {
+        &__li {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        &__ind {
+          display: flex;
+          align-items: center;
+          max-width: 134px;
+          margin-right: 20px;
+          @media (max-width: 768px) {
+            max-width: 118px;
+            margin-right: 15px;
+          }
+        }
+
+        &__logo {
+          width: 24px;
+          height: 24px;
+          margin-right: 10px;
+          @media (max-width: 768px) {
+            width: 16px;
+            height: 16px;
+            margin-right: 7px;
+            display: flex;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        &__name {
+          color: #36413B;
+          font-size: 14px;
+          line-height: normal;
+          @media (max-width: 768px) {
+            max-width: 95px;
+            font-size: 12px;
+          }
+        }
+
+        &__elem {
+          flex: 1 1 0;
+          width: 100%;
+        }
+
+        &__scale {
+          width: 100%;
+          height: 24px;
+          border-radius: 13px;
+          background-color: rgba(71, 182, 142, 0.5);
+          position: relative;
+          z-index: 1;
+        }
+
+        &__value {
+          position: absolute;
+          background: $background_light_green;
+          top: 0;
+          height: 24px;
+          z-index: 2;
+          border-radius: 13px;
+        }
+
+        &__digitals {
+          color: $white;
+          font-family: $font-bold;
+          font-size: 12px;
+          line-height: normal;
+          position: absolute;
+          top: 50%;
+          right: 27px;
+          transform: translateY(-50%);
+          white-space: nowrap;
+          @media (max-width: 768px) {
+            font-size: 10px;
+            right: 10px;
+          }
+        }
+        
+      }
+    }
+
+    &.type-vertical {
+      .diagrams {
+        &__names {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 16px;
+          @media (max-width: 768px) {
+            margin-top: 10px;
+          }
+        }
+
+        &__name {
+          max-width: 100px;
+          width: 100px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @media (max-width: 768px) {
+            min-width: 86px;
+            margin-right: 15px;
+          }
+        }
+
+        &__icon {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          overflow: hidden;
+          margin-bottom: 10px;
+          @media (max-width: 768px) {
+            margin-bottom: 5px;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &__title {
+          color: #36413B;
+          font-size: 12px;
+          line-height: normal;
+          @media (max-width: 768px) {
+            font-size: 10px;
+            text-align: center;
+          }
+        }
+
+        &__grafics {
+          display: flex;
+          justify-content: space-between;
+
+          border-bottom: 1px solid #F1F1F1;
+        }
+        &__elem {
+          width: 100px;
+          height: 290px;
+          @media (max-width: 768px) {
+            min-width: 86px;
+            margin-right: 15px;
+          }
+        }
+        &__scale {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          background: rgba(71, 182, 142, 0.5);
+          border-radius: 13px 13px 0 0;
+        }
+        &__value {
+          width: 100% ;
+          position: absolute;
+          left: 0;
+          background: #47B68E;
+        }
+        &__min, &__max {
+          color: #FFF;
+          font-family: $font-bold;
+          font-size: 12px;
+          line-height: normal;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &__min {
+          bottom: 5px;
+        }
+        &__max {
+          top: 5px;
+        }
+      }
+
+    }
+  }
+
+
+}
